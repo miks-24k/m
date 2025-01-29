@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Accommodations - Viva la Vida Resort</title>
+    <link rel="icon" href="pic/logo.png" type="image">
+    <style>
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('truetype'),
+                 url('fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Anton';
+            src: url('fonts/Anton/Anton-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Brittany';
+            src: url('fonts/Brittany/BrittanySignature.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Protest Revolution';
+            src: url('fonts/Protest_Revolution/ProtestRevolution-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Sanford';
+            src: url('fonts/Sanford-0103_demo.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Cannia';
+            src: url('fonts/Cannia.otf') format('truetype');
+            font-weight: bolder;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("pic/luxury\ bg_upscayl_4x_upscayl-standard-4x.png"); 
+            background-size: cover; 
+            background-position: center center; 
+            background-repeat: no-repeat; 
+            color: #333;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 98%;
+            background-blend-mode: color;
+            color: black;
+            padding: 0.5rem 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            font-family: 'Playfair Display', sans-serif;
+        }
+
+        .content {
+            margin-top: -50px; 
+            z-index: 1;
+            color: rgb(0, 0, 0);
+            font-family: Georgia, Times, 'Times New Roman', serif;
+            font-size: 1.3rem;
+        }
+
+        .content p {
+            color: rgb(0, 0, 0);
+            font-family: 'Playfair Display';
+            font-size: 1.1rem;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        header nav .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        header nav .logo-container img {
+            margin-right: 1rem;
+            
+        }
+
+        header nav .logo {
+            font-size: 1.2rem;
+            color: #000000;
+            font-family: 'Protest Revolution', sans-serif;
+            margin-top: 0.5rem;
+        }
+
+        header nav .logo .la {
+            font-family: 'Brittany', sans-serif;
+        }
+
+        header nav .links {
+            display: flex;
+            justify-content: flex-end; 
+        }
+
+        header nav a {
+            color:rgb(0, 0, 0);
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background-size: cover; 
+            background-position: center center;
+            height: 50vh; 
+            color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .hero h1 {
+            font-size: 6rem;
+            font-family: 'Cannia', sans-serif;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 0 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 2fr);
+            gap: 30px;
+        }
+
+        .accommodation {
+            background: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .accommodation:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .accommodation img {
+            width: 500px;          
+            height: 500px;         
+            object-fit: cover;    
+        }
+
+        .separator {
+            border-top: 2px solid #000000; 
+            margin: 70px 0; 
+        }
+
+        .separators {
+            border-top: 2px solid #000000; 
+            margin: 50px 0px; 
+        }
+
+        .accommodation h3 {
+            margin: 1rem;
+            font-size: 1.5rem;
+            color: #000000;
+            font-family: 'Sanford', serif;
+        }
+
+        .accommodation p {
+            margin: 0 1rem 1rem;
+            color: #000000;
+            font-family: Georgia, serif;
+            font-weight: bolder;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            font-family: 'Anton';
+        }
+
+         @media (max-width: 768px) {
+        .hero {
+             height: 50vh; 
+             }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class = "logo-container">
+                <img src = "pic/logo.png" alt = "resort logo" width = "50"> 
+                <div class="logo">Viva <span class="la">La</span> Vida</div>
+            </div>
+           
+            <div class = "links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <h1>Luxury Accommodations</h1>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="content">
+            <h2>Stay in Comfort and Style</h2>
+            <p>
+                At Viva la Vida Resort, we offer a variety of luxurious accommodations to suit your preferences. From elegant suites to cozy villas, each space is designed to provide comfort and tranquility.
+            </p> </div>
+
+            <div class="separators"></div>
+        
+        <div class="grid">
+            <div class="accommodation">
+                <img src="pic/junior_upscayl_4x_upscayl-standard-4x.png" alt="Junior Suite">
+                <h3>Junior Suite</h3>
+                <p>A cozy and comfortable junior suite with a bedroom, living room, and sea view.</p>
+            </div>
+
+            <div class="accommodation">
+                <img src="pic/eden_upscayl_4x_upscayl-standard-4x.png" alt="Eden Junior Suite">
+                <h3>Eden Junior Suite</h3>
+                <p>Spacious and luxurious with modern amenities and breathtaking views.</p>
+            </div>
+
+            <div class="accommodation">
+                <img src="pic/private_upscayl_4x_upscayl-standard-4x.png" alt="Private Villa">
+                <h3>Private Villa</h3>
+                <p>Indulge in ultimate privacy and elegance with personalized services.</p>
+            </div>
+
+            <div class="accommodation">
+                <img src="pic/eden junior_upscayl_4x_upscayl-standard-4x.png" alt="Eden Junior Suite Pool View">
+                <h3>Eden Junior Suite Pool View</h3>
+                <p>Relax by the pool with direct access from your suite.</p>
+            </div>
+
+            <div class="accommodation">
+                <img src="pic/ocean_upscayl_4x_upscayl-standard-4x.png" alt="Ocean Deluxe Suite">
+                <h3>Ocean Deluxe Suite</h3>
+                <p>Experience the tranquility of the ocean in this deluxe suite with premium features.</p>
+            </div>
+
+            <div class="accommodation">
+                <img src="pic/garden_upscayl_4x_upscayl-standard-4x.png" alt="Garden View Suite">
+                <h3>Garden View Suite</h3>
+                <p>Unwind with stunning garden views in a cozy and peaceful environment.</p>
+            </div>
+
+        </div>
+        <div class="separator"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Viva la Vida Resort. All rights reserved.</p>
+    </footer>
+</body>
+</html>
